@@ -1,0 +1,130 @@
+.description{
+  background: $emptyBlueBg;
+  &__item{
+    display: none;
+    width: 100%;
+    transition: .5s all ease;
+    &-inf{
+      width: 48%;
+      padding-left: 30px;
+      li{
+        margin-bottom: 18px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 0.01em;
+        position: relative;
+        &:after{
+          position: absolute;
+          content: '';
+          left: -27px;
+          top: 10%;
+          background: $blue;
+          border-radius: 50%;
+          height: 12px;
+          width: 12px;
+        }
+      }
+      li:nth-child(even){
+        &:after{
+          background: transparent;
+          border: .5px solid $blue;
+        }
+      }
+    }
+    &-img{
+      width: 48%;
+      background-size: cover;
+      background-position: top right;
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+}
+
+*{
+  outline: none;
+}
+
+.desc__wrap{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+
+.description__item-active{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex !important;
+  justify-content: space-between;
+  animation: Appearance 1s;
+}
+
+@keyframes Appearance{
+  0%{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+}
+
+.desc__btn{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: flex-end;
+  a{
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin-left: 12px;
+    background: #fff;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.15);
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    &:hover{
+      box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.17);
+    }
+    img{
+      width: 40%;
+    }
+  }
+}
+
+.desc__dots{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  div{
+    border: none;
+    background: $lGrey;
+    height: 2px;
+    width: 30px;
+    border-radius: 3px;
+    font-size: 0;
+    margin-left: 16px;
+    outline: none;
+  }
+  div.active{
+    background: $blue;
+    height: 6px;
+    box-shadow: 0px 0px 4px rgba(66, 73, 226, 0.5);
+  }
+}

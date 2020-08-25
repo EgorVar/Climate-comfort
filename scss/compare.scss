@@ -1,0 +1,211 @@
+.compare{
+  &__wrap{
+    margin-bottom: 60px;
+  }
+  .item{
+    &:first-child{
+      border-top: .5px solid #D3D3D3;
+    }
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 20px;
+    border-bottom: .5px solid #D3D3D3;
+    &__parameters{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: flex-end;
+      width: 70%;
+      padding: 0 20px;
+      align-items: center;
+      ul{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        li{
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 15px;
+          color: rgba(34, 34, 34, 0.5);
+          display: block;
+          width: 25%;
+          text-align: center;
+          padding: 40px;
+        }
+        li.label{
+          color: $blue;
+        }
+      }
+    }
+    &__img{
+      width: 58px;
+      height: 58px;
+      background: #F5F7FF;
+      background-repeat: no-repeat;
+      background-size: 44px 33px;
+      background-position: center;
+      margin-right: 14px;
+    }
+    &__main{
+      width: 30%;
+      &-title{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 24px;
+          color: $blue;
+        }
+        a.close{
+          width: 20px;
+          height: 20px;
+          &:before, &:after{
+            width: 24px;
+            height: .5px;
+          }
+        }
+      }
+      &-inf{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        .price{
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          color: $blue;
+          margin-bottom: 12px;
+        }
+        .status{
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 17px;
+          color: rgba(34, 34, 34, 0.5);
+        }
+      }
+    }
+  }
+  &__points{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    width: 100%;
+    ul{
+      width: 68%;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      li{
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 24px;
+        color: #333333;
+        width: 25%;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .back{
+    padding-left: 10px;
+    a{
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: #222222;
+    }
+  }
+}
+
+html, body::-webkit-scrollbar {
+    width: 8px; /* ширина для вертикального скролла */
+    height: 8px; /* высота для горизонтального скролла */
+    margin-right: 10px;
+}
+html::-webkit-scrollbar-thumb, body::-webkit-scrollbar-thumb {
+    background: $blue;
+    border-radius: 10px;
+}
+
+
+@media (max-width: 1000px) and (min-width: 801px){
+  .compare__wrap{
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    &::-webkit-scrollbar {
+        height: 8px;
+        width: 10%;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $blue;
+        border-radius: 10px;
+    }
+
+    .compare__points{
+      width: 900px;
+    }
+    .item{
+      width: 900px;
+    }
+  }
+}
+
+@media (max-width: 800px) and (min-width: 601px){
+  .compare{
+    margin-top: 100px;
+  }
+  .compare__wrap{
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    &::-webkit-scrollbar {
+        height: 8px;
+        width: 10%;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $blue;
+        border-radius: 10px;
+    }
+
+    .compare__points{
+      width: 900px;
+    }
+    .item{
+      width: 900px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .compare{
+    margin-top: 190px;
+  }
+  .compare__wrap{
+    overflow-x: scroll;
+    padding-bottom: 20px;
+    &::-webkit-scrollbar {
+        height: 8px;
+        width: 10%;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $blue;
+        border-radius: 10px;
+    }
+    .compare__points{
+      width: 900px;
+    }
+    .item{
+      width: 900px;
+    }
+  }
+}

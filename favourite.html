@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Favorite</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Прелоадер -->
+
+    <div class="preloader active">
+      <div class="lds-roller">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <!-- Прелоадер -->
+
+    <!-- Фиксированный блок с корзиной, сравнением, просмотренным -->
+    <div class="box__status">
+      <div class="container">
+        <div class="item">
+          <a href="#">
+            <svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 18.2633L1 6.76331H22L19 18.2633H4Z" stroke="#343434" stroke-width="1.5"/>
+            <path d="M4 6.76331C5 1.26331 15.1 -2.83669 19.5 6.76331" stroke="#343434" stroke-width="1.5"/>
+            </svg>
+            <span>Корзина</span>
+          </a>
+        </div>
+        <div class="item">
+          <a href="#">
+            <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18.5 11L11 19L1 9C0.5 7.5 0.5 7.5 0.5 6.5" stroke="#343434"/>
+            <path d="M0.5 5C0.5 2 5.5 -2.5 11 3.5C11 3.5 17.3636 -1.99999 21 3C21 3 22.7 6.8 19.5 10" stroke="#343434"/>
+            </svg>
+            <span>Избранные: <span>12</span></span>
+          </a>
+        </div>
+        <div class="item special">
+          <a href="#">
+            <svg width="38" height="20" viewBox="0 0 38 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M26.4672 10C26.4672 14.7355 22.9525 18.5 18.7049 18.5C14.4573 18.5 10.9426 14.7355 10.9426 10C10.9426 5.26447 14.4573 1.5 18.7049 1.5C22.9525 1.5 26.4672 5.26447 26.4672 10Z" stroke="#343452"/>
+            <path d="M13 8.76786C13.1967 7.48214 14.2984 4.78214 17.1311 4.26786" stroke="#343452"/>
+            <path d="M18.7049 1C9.26229 1 3.7 6.88214 1 9.82321C3.7 12.7643 9.26229 19 18.7049 19C28.1475 19 37 10 37 10C37 10 28.1475 1 18.7049 1Z" stroke="#343452"/>
+            </svg>
+
+            <span>Просмотренные: <span>12</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- Фиксированный блок с корзиной, сравнением, просмотренным -->
+
+
+    <!-- Блок с кнопкой подняться наверх -->
+    <div class="btn__move-up">
+      <img src="images/arrowDown.svg" alt="arrow up">
+    </div>
+    <!-- Блок с кнопкой подняться наверх -->
+
+
+    <!-- Модальное окно с формой входа в аккаунт -->
+    <div class="modal__wrap">
+      <div class="modal">
+        <a href="#" class="close"></a>
+        <div class="container">
+          <div class="modal__sign-in">
+            <div class="label">Покинуть аккаунт</div>
+            <div class="error"></div>
+            <div class="logout">
+              <a href="#" class="bold-btn">Выйти</a>
+              <a href="#" class="light-btn">Перейти к товарам</a>
+            </div>
+            <form action="#" class="modal__form"  id="sign-in">
+              <div class="input__wrap">
+                <input type="text" placeholder="Логин" name="login">
+                <img src="images/usern.svg" alt="login">
+              </div>
+              <div class="input__wrap">
+                <input type="text" placeholder="Пароль">
+                <img src="images/password.svg" alt="password" name="password">
+              </div>
+              <div class="input__link">
+                <label for="">test</label>
+                <input type="checkbox">
+              </div>
+              <div class="modal__btn">
+                <button type="submit" class="bold-btn">Войти</button>
+                <a href="#" id="link__register">Регистрация</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно с формой входа в аккаунт -->
+
+
+    <!-- Модальное окно с формой регистрации -->
+    <div class="modal__wrap">
+      <div class="modal">
+        <a href="#" class="close"></a>
+        <div class="container">
+          <div class="modal__sign-up">
+            <div class="label">Регистрация</div>
+            <div class="error"></div>
+            <form action="#" class="modal__form" id="sign-up">
+              <div class="input__wrap">
+                <input type="text" placeholder="Имя" name="name">
+                <img src="images/usern.svg" alt="login">
+              </div>
+              <div class="input__wrap">
+                <input type="text" placeholder="Электронная почта" name="email">
+                <img src="images/mail2.svg" alt="password">
+              </div>
+              <div class="input__wrap-items">
+                <div class="input__wrap">
+                  <input type="password" placeholder="Пароль" id="password" name="password">
+                  <img src="images/password.svg" alt="password">
+                </div>
+                <div class="input__wrap">
+                  <input type="password" placeholder="Пароль" id="password_confirmation" name="password_confirmation">
+                  <img src="images/password.svg" alt="password">
+                </div>
+              </div>
+              <div class="modal__btn">
+                <button type="submit" class="bold-btn">Зарегистрироваться</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно с формой регистрации -->
+
+
+    <!-- Модальное окно для мобильных с формой поиска товаров -->
+    <div class="modal__wrap ">
+      <div class="modal">
+        <a href="#" class="close"></a>
+        <div class="container">
+          <div class="modal__search-mobile">
+            <div class="label">Поиск товаров</div>
+            <div class="search__wrap-mobile">
+              <div class="input__wrap">
+                <input type="text" placeholder="Поиск товаров">
+                <img src="images/search.svg" alt="search">
+              </div>
+            </div>
+            <div class="search__found"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно для мобильных с формой поиска товаров -->
+
+
+    <!-- Модальное окно для мобильных с формой зазказа обратного звонка -->
+    <div class="modal__phone">
+      <a href="#" class="close"></a>
+      <div class="modal__phone-wrap">
+        <h4>Обратный звонок</h4>
+        <div class="modal__phone-inner">
+          <form action="index.html" method="get">
+            <input type="text" placeholder="Заказать обратный звонок" name="callback-phone">
+            <button type="submit">
+              <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7.94976 16.8995L15.8995 8.94977L7.94976 1.00001" stroke="white"/>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно для мобильных с формой зазказа обратного звонка -->
+
+
+
+
+    <header>
+      <div class="container">
+        <div class="header_wrap">
+          <div>
+            <div class="header__inf">
+              <div class="header__inf-item">
+                <div class="email">Email: info@климаткомфорт31.рф</div>
+                <div class="adress">Адрес: <a href="#" class="blue">г. Белгород, Михайловское шоссе, 5а</a></div>
+              </div>
+              <div class="header__inf-item blue">
+                <div class="work">Работаем ежедневно с 09:30 до 19:00</div>
+                <div class="numbers">
+                  <div><a href="tel:+74722364094">+7(4722) 364-094</a></div>
+                  <div><a href="tel:+74722364094">+7(4722) 364-094</a></div>
+                  <div><a href="tel:+79290009110">+7-929-000-91-10</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="name__shop">
+              <span>КлиматКомфорт</span> - интернет магазин климатической техники
+            </div>
+          </div>
+          <div class="search">
+            <form method="POST" action="">
+              <input type="text" class="search__product" name="s" placeholder="Поиск товаров">
+              <button type="submit" name="button" class="search__btn">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="9.25" stroke="#343434" stroke-width="1.5"/>
+                <path d="M16 16L21 21" stroke="#343434" stroke-width="2"/>
+                </svg>
+              </button>
+            </form>
+            <div class="search__found">
+              <a href="#">test</a>
+              <a href="#">test</a>
+              <a href="#">test</a>
+            </div>
+          </div>
+          <div class="header__btn">
+              <a href="#" id="header__number" class="btn__icons">
+                <span class="icons">
+                  <svg width="24" height="24" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.55 4.53525L4.05 5.73604L4.65 6.78673C5.37 8.1076 7.31667 9.43847 8.2 9.9388C8.48333 9.58857 9.11 8.81806 9.35 8.53788C9.59 8.2577 9.88333 8.28772 10 8.33775C10.6333 8.62127 12.01 9.22833 12.45 9.38844C12.89 9.54854 13 9.88877 13 10.0389L12.45 12.4404C12.45 12.6072 12.33 12.9508 11.85 12.9908C11.25 13.0408 9.9 12.8907 8.45 12.4404C7 11.9901 5.55 11.2897 3.35 8.88811C1.15 6.48653 1 2.68403 1 2.23374C1 1.8735 1.26667 1.65002 1.4 1.58331C2.03333 1.44989 3.4 1.15303 3.8 1.03295C4.2 0.912874 4.43333 1.1497 4.5 1.28312C4.75 1.86683 5.31 3.16435 5.55 3.6847C5.79 4.20504 5.65 4.46854 5.55 4.53525Z" stroke="white" stroke-opacity="0.8" stroke-width="0.8"/>
+                  </svg>
+                </span>
+                <span class="desc__link">Заказать обратный звонок</span>
+                <span class="number__field" >
+
+                </span>
+              </a>
+              <a href="#" class="btn__icons" id="sign_in">
+                <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="11.5" cy="7.5" r="6.75" stroke="#343434" stroke-width="1.5"/>
+                <path d="M6 12C4.5 12.3333 1.5 14.1 1.5 18.5" stroke="#343434" stroke-width="1.5"/>
+                <path d="M16 12C17.6667 12.3077 21 13.9385 21 18" stroke="#343434" stroke-width="1.5"/>
+                </svg>
+                <span class="desc__link">Войти</span>
+              </a>
+              <a href="compare.html" class="btn__icons special">
+                <svg width="15" height="20" viewBox="0 0 15 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect y="4.5" width="1.5" height="15" fill="#343434"/>
+                <rect x="4.5" width="1.5" height="19.5" fill="#343434"/>
+                <rect x="9" y="4.5" width="1.5" height="15" fill="#343434"/>
+                <rect x="13.5" width="1.5" height="19.5" fill="#343434"/>
+                </svg>
+                <span class="desc__link">Сравнение</span>
+              </a>
+              <a href="favourite.html" class="btn__icons">
+                <svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 11L11 19L1 9C0.5 7.5 0.5 7.5 0.5 6.5" stroke="#343434"/>
+                <path d="M0.5 5C0.5 2 5.5 -2.5 11 3.5C11 3.5 17.3636 -1.99999 21 3C21 3 22.7 6.8 19.5 10" stroke="#343434"/>
+                </svg>
+                <span class="desc__link">Избранное</span>
+              </a>
+              <a href="#" class="btn__icons mobile"  id="search">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="10" cy="10" r="9.25" stroke="#343434" stroke-width="1.5"/>
+                <path d="M16 16L21 21" stroke="#343434" stroke-width="2"/>
+                </svg>
+              </a>
+          </div>
+        </div>
+        <div class="navbar">
+          <div class="logo">
+            <a href="/"><img src="images/logo.svg" alt=""></a>
+          </div>
+          <div class="navbar__menu">
+            <a href="#" class="catalog__btn">Каталог товаров</a>
+            <ul class="nav__items">
+              <li><a href="/">О компании</a></li>
+              <li><a href="delivery.html">Доставка и оплата</a></li>
+              <li><a href="montage.html">Монтаж</a></li>
+              <li><a href="/">Вентиляции</a></li>
+              <li><a href="/">Акции</a></li>
+              <li><a href="contact.html">Контакты</a></li>
+              <li><a href="/">Сервисные центры</a></li>
+            </ul>
+          </div>
+          <div class="btn__navbar">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+
+
+    <!-- Меню каталога товаров -->
+    <div class="sidebar">
+      <div class="container">
+        <div class="sidebar__header">
+          <div class="sidebar__header-btn">
+            <a href="#" class="title">Каталог товаров</a>
+          </div>
+          <a href="#" class="close"></a>
+        </div>
+        <div class="sidebar__menu">
+          <ul>
+            <li>
+              <div><span>01</span><div class="slide__wrap inner">Кондиционеры</div></div>
+              <ul>
+                <li><div><span>01</span><div class="slide__wrap"><a href="#">Кондиционеры</a></div></div></li>
+                <li><div><span>02</span><div class="slide__wrap"><a href="#">Настенные кондиционеры</a></div></div></li>
+                <li>
+                  <div><span>03</span><div class="slide__wrap inner">Мульти сплит-системы</div></div>
+                  <ul>
+                    <li><div><span>02</span><div class="side__wrap"><a href="#">Мульти сплит-системы</a></div></div></li>
+                    <li><div><span>02</span><div class="side__wrap"><a href="#">Наружные блоки</a></div></div></li>
+                    <li><div><span>02</span><div class="side__wrap"><a href="#">Настенные блоки</a></div></div></li>
+                    <li><div><span>02</span><div class="side__wrap"><a href="#">Канальные блоки</a></div></div></li>
+                    <li><div><span>02</span><div class="side__wrap"><a href="#">Кассетные блоки</a></div></div></li>
+                    <li><div><span>02</span><div class="side__wrap"><a href="#">Напольно-потолочные блоки</a></div></div></li>
+                  </ul>
+                </li>
+                <li><div><span>04</span><div class="slide__wrap"><a href="#">Мобильные кондиционеры</a></div></div></li>
+                <li><div><span>05</span><div class="slide__wrap"><a href="#">Напольно-потолочные кондиционеры</a></div></div></li>
+                <li><div><span>06</span><div class="slide__wrap"><a href="#">Кассетные кондиционеры</a></div></div></li>
+                <li><div><span>07</span><div class="slide__wrap"><a href="#">Канальные кондиционеры</a></div></div></li>
+                <li><div><span>08</span><div class="slide__wrap"><a href="#">Колонные сплит-системы</a></div></div></li>
+                <li><div><span>09</span><div class="slide__wrap"><a href="#">Холодильные сплит-системы</a></div></div></li>
+                <li><div><span>10</span><div class="slide__wrap"><a href="#">Полезная информация</a></div></div></li>
+              </ul>
+            </li>
+            <li>
+              <div><span>02</span><div class="slide__wrap"><a href="#">VRF-системы кондиционирования</a></div></div>
+            </li>
+            <li>
+              <div><span>03</span><div class="slide__wrap"><a href="#">Фанкойлы</a></div></div>
+            </li>
+            <li>
+              <div><span>04</span><div class="slide__wrap"><a href="#">Система умный дом</a></div></div>
+            </li>
+            <li>
+              <div><span>05</span><div class="slide__wrap inner">Очистка, увлажнение и осушение воздуха</div></div>
+              <ul>
+                <li>
+                  <div><span>01</span><div class="slide__wrap"><a href="#">Очистка, увлажнение и осушение воздуха</a></div></div>
+                </li>
+                <li>
+                  <div><span>02</span><div class="slide__wrap inner">Расходные материалы для систем кондиционирования</div></div>
+                  <ul>
+                    <li>
+                      <div><span>01</span><div class="slide__wrap"><a href="#">Расходные материалы для систем кондиционирования</a></div></div>
+                    </li>
+                    <li>
+                      <div><span>02</span><div class="slide__wrap"><a href="#">Кронштейны и металлоконструкции</a></div></div>
+                    </li>
+                    <li>
+                      <div><span>03</span><div class="slide__wrap"><a href="#">Фреон</a></div></div>
+                    </li>
+                    <li>
+                      <div><span>04</span><div class="slide__wrap"><a href="#">Дренажные насосы</a></div></div>
+                    </li>
+                    <li>
+                      <div><span>05</span><div class="slide__wrap"><a href="#">Зимние комплекты для систем кондиционирования</a></div></div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div><span>01</span><div class="slide__wrap"><a href="#">Водонагреватели</a></div></div>
+                </li>
+                <li>
+                  <div><span>02</span><div class="slide__wrap"><a href="#">Мойки воздуха</a></div></div>
+                </li>
+                <li>
+                  <div><span>03</span><div class="slide__wrap"><a href="#">Мойки воздуха</a></div></div>
+                </li>
+                <li>
+                  <div><span>03</span><div class="slide__wrap"><a href="#">Воздухоочистители</a></div></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <!-- Меню каталога товаров -->
+
+
+
+
+  <div class="product__box">
+    <div class="container">
+      <div class="bread__crumbs">
+        <a href="#">Главная</a>
+        <span></span>
+        <a href="#" class="active">Избранное</a>
+      </div>
+      <h2 class="title">Избранное</h2>
+      <div class="product__box-wrap">
+        <div class="item">
+          <button class="close"></button>
+          <div class="item__main">
+            <a href="#" class="title">Сплит-система Shuft SFT-07HN1_18Y</a>
+            <div class="item__main-cart">
+              <div class="item__main-preview">
+                <div class="main__card-img" style="background-image: url(images/cart.png);"></div>
+                <div class="count">
+                  <div class="label">Кол-во</div>
+                  <div>
+                    <button type="button" data-action="minus" class="minus">-</button>
+                    <input type="text" size="1" value="1">
+                    <button type="button" data-action="plus" class="plus">+</button>
+                  </div>
+                </div>
+              </div>
+              <div class="item__main-btn">
+                <div class="take">
+                  <span>Выбрать</span><input type="checkbox">
+                </div>
+                <a href="#" class="compare__btn">K сравнению</a>
+              </div>
+            </div>
+          </div>
+          <div class="item__price">
+            <div class="price">13 490  ₽ </div>
+            <a href="#" class="bold-btn">Купить</a>
+          </div>
+        </div>
+      </div>
+      <div class="product__box-bottom">
+        <div class="total">
+          <span>Итого:</span> 13 490  ₽
+        </div>
+        <div class="box__bottom-btn">
+          <a href="#" class="light-btn">Удалить из избранного</a><a href="#" class="bold-btn">Купить</a>
+        </div>
+      </div>
+      <div class="back">
+        <a href="#" class="btn__stroke">Назад</a>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="recomendation">
+    <div class="container">
+      <div class="recomendation__wrap space-b">
+        <h2 class="title">Рекомендованное</h2>
+        <div class="recomendation__arrows">
+          <button class="arrow__prev"><img src="images/arrowL.svg" alt=""></button>
+          <button class="arrow__next"><img src="images/arrowR.svg" alt=""></button>
+        </div>
+      </div>
+      <div class="recomendation__slider">
+
+        <div class="slider__item">
+          <div class="card">
+            <div class="card__btn-top">
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/compare1.svg" alt="">
+                  </div>
+                  <span>в сравнение</span>
+                </button>
+              </div>
+              <span class="visible">|</span>
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/favourite.svg" alt="">
+                  </div>
+                  <span>в избранное</span>
+                </button>
+              </div>
+            </div>
+            <div class="card__img" style="background-image: url(images/card.png)"></div>
+            <div class="card__desc">
+              <h3>Сплит-система Shuft SFT-07HN1_18Y</h3>
+              <span class="success"></span>
+            </div>
+            <div class="card__wrap mb-16">
+              <div class="card__rating">
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star"></div>
+              </div>
+              <div class="card__sale">-18%</div>
+            </div>
+            <div class="card__wrap space-b">
+              <div class="card__price">
+                <div class="price__last">17 490 ₽</div>
+                <div class="price">13 490 ₽</div>
+              </div>
+              <div class="card__view">
+                <a href="#" class="btn__stroke">Подробнее</a>
+              </div>
+            </div>
+              <div class="card__buy">
+                <a href="#" class="bold-btn">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="card">
+            <div class="card__btn-top">
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/compare1.svg" alt="">
+                  </div>
+                  <span>в сравнение</span>
+                </button>
+              </div>
+              <span class="visible">|</span>
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/favourite.svg" alt="">
+                  </div>
+                  <span>в избранное</span>
+                </button>
+              </div>
+            </div>
+            <div class="card__img" style="background-image: url(images/card.png)"></div>
+            <div class="card__desc">
+              <h3>Сплит-система Shuft SFT-07HN1_18Y</h3>
+              <span class="success"></span>
+            </div>
+            <div class="card__wrap mb-16">
+              <div class="card__rating">
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star"></div>
+              </div>
+              <div class="card__sale">-18%</div>
+            </div>
+            <div class="card__wrap space-b">
+              <div class="card__price">
+                <div class="price__last">17 490 ₽</div>
+                <div class="price">13 490 ₽</div>
+              </div>
+              <div class="card__view">
+                <a href="#" class="btn__stroke">Подробнее</a>
+              </div>
+            </div>
+              <div class="card__buy">
+                <a href="#" class="bold-btn">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="card">
+            <div class="card__btn-top">
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/compare1.svg" alt="">
+                  </div>
+                  <span>в сравнение</span>
+                </button>
+              </div>
+              <span class="visible">|</span>
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/favourite.svg" alt="">
+                  </div>
+                  <span>в избранное</span>
+                </button>
+              </div>
+            </div>
+            <div class="card__img" style="background-image: url(images/card.png)"></div>
+            <div class="card__desc">
+              <h3>Сплит-система Shuft SFT-07HN1_18Y</h3>
+              <span class="success"></span>
+            </div>
+            <div class="card__wrap mb-16">
+              <div class="card__rating">
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star"></div>
+              </div>
+              <div class="card__sale">-18%</div>
+            </div>
+            <div class="card__wrap space-b">
+              <div class="card__price">
+                <div class="price__last">17 490 ₽</div>
+                <div class="price">13 490 ₽</div>
+              </div>
+              <div class="card__view">
+                <a href="#" class="btn__stroke">Подробнее</a>
+              </div>
+            </div>
+              <div class="card__buy">
+                <a href="#" class="bold-btn">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="card">
+            <div class="card__btn-top">
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/compare1.svg" alt="">
+                  </div>
+                  <span>в сравнение</span>
+                </button>
+              </div>
+              <span class="visible">|</span>
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/favourite.svg" alt="">
+                  </div>
+                  <span>в избранное</span>
+                </button>
+              </div>
+            </div>
+            <div class="card__img" style="background-image: url(images/card.png)"></div>
+            <div class="card__desc">
+              <h3>Сплит-система Shuft SFT-07HN1_18Y</h3>
+              <span class="success"></span>
+            </div>
+            <div class="card__wrap mb-16">
+              <div class="card__rating">
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star"></div>
+              </div>
+              <div class="card__sale">-18%</div>
+            </div>
+            <div class="card__wrap space-b">
+              <div class="card__price">
+                <div class="price__last">17 490 ₽</div>
+                <div class="price">13 490 ₽</div>
+              </div>
+              <div class="card__view">
+                <a href="#" class="btn__stroke">Подробнее</a>
+              </div>
+            </div>
+              <div class="card__buy">
+                <a href="#" class="bold-btn">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="card">
+            <div class="card__btn-top">
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/compare1.svg" alt="">
+                  </div>
+                  <span>в сравнение</span>
+                </button>
+              </div>
+              <span class="visible">|</span>
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/favourite.svg" alt="">
+                  </div>
+                  <span>в избранное</span>
+                </button>
+              </div>
+            </div>
+            <div class="card__img" style="background-image: url(images/card.png)"></div>
+            <div class="card__desc">
+              <h3>Сплит-система Shuft SFT-07HN1_18Y</h3>
+              <span class="success"></span>
+            </div>
+            <div class="card__wrap mb-16">
+              <div class="card__rating">
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star"></div>
+              </div>
+              <div class="card__sale">-18%</div>
+            </div>
+            <div class="card__wrap space-b">
+              <div class="card__price">
+                <div class="price__last">17 490 ₽</div>
+                <div class="price">13 490 ₽</div>
+              </div>
+              <div class="card__view">
+                <a href="#" class="btn__stroke">Подробнее</a>
+              </div>
+            </div>
+              <div class="card__buy">
+                <a href="#" class="bold-btn">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="card">
+            <div class="card__btn-top">
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/compare1.svg" alt="">
+                  </div>
+                  <span>в сравнение</span>
+                </button>
+              </div>
+              <span class="visible">|</span>
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/favourite.svg" alt="">
+                  </div>
+                  <span>в избранное</span>
+                </button>
+              </div>
+            </div>
+            <div class="card__img" style="background-image: url(images/card.png)"></div>
+            <div class="card__desc">
+              <h3>Сплит-система Shuft SFT-07HN1_18Y</h3>
+              <span class="success"></span>
+            </div>
+            <div class="card__wrap mb-16">
+              <div class="card__rating">
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star"></div>
+              </div>
+              <div class="card__sale">-18%</div>
+            </div>
+            <div class="card__wrap space-b">
+              <div class="card__price">
+                <div class="price__last">17 490 ₽</div>
+                <div class="price">13 490 ₽</div>
+              </div>
+              <div class="card__view">
+                <a href="#" class="btn__stroke">Подробнее</a>
+              </div>
+            </div>
+              <div class="card__buy">
+                <a href="#" class="bold-btn">Купить</a>
+            </div>
+          </div>
+        </div>
+        <div class="slider__item">
+          <div class="card">
+            <div class="card__btn-top">
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/compare1.svg" alt="">
+                  </div>
+                  <span>в сравнение</span>
+                </button>
+              </div>
+              <span class="visible">|</span>
+              <div class="card__btn-top__item">
+                <button>
+                  <div class="active">
+                    <img src="images/favourite.svg" alt="">
+                  </div>
+                  <span>в избранное</span>
+                </button>
+              </div>
+            </div>
+            <div class="card__img" style="background-image: url(images/card.png)"></div>
+            <div class="card__desc">
+              <h3>Сплит-система Shuft SFT-07HN1_18Y</h3>
+              <span class="success"></span>
+            </div>
+            <div class="card__wrap mb-16">
+              <div class="card__rating">
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star active"></div>
+                <div class="star"></div>
+              </div>
+              <div class="card__sale">-18%</div>
+            </div>
+            <div class="card__wrap space-b">
+              <div class="card__price">
+                <div class="price__last">17 490 ₽</div>
+                <div class="price">13 490 ₽</div>
+              </div>
+              <div class="card__view">
+                <a href="#" class="btn__stroke">Подробнее</a>
+              </div>
+            </div>
+              <div class="card__buy">
+                <a href="#" class="bold-btn">Купить</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+
+
+  <footer>
+    <div class="container">
+      <div class="footer__link">
+        <div class="footer__link-catalog">
+          <div class="footer__label">Каталог</div>
+          <div class="footer__link-catalog__wrap">
+            <ul>
+              <li><a href="#">Кондиционеры</a></li>
+              <li><a href="#">Расходники</a></li>
+              <li><a href="#">VRF-системы</a></li>
+              <li><a href="#">Фанкойлы</a></li>
+              <li><a href="#">Водонагреватели</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Увлажнители воздуха</a></li>
+              <li><a href="#">Обогреватели</a></li>
+              <li><a href="#">Тепловые пушки</a></li>
+              <li><a href="#">Тепловые завесы</a></li>
+              <li><a href="#">Тепловентиляторы</a></li>
+            </ul>
+            <ul>
+              <li><a href="#">Котлы</a></li>
+              <li><a href="#">Насосы</a></li>
+              <li><a href="#">Радиаторы отопления</a></li>
+              <li><a href="#">Теплый пол</a></li>
+              <li><a href="#">Бытовые фильтры</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__link-sale">
+          <div class="footer__label">Акции</div>
+          <ul>
+            <li><a href="#">Прайс лист</a></li>
+            <li><a href="#">Спецпредложение</a></li>
+            <li><a href="#">Акции</a></li>
+            <li><a href="#">Система скидок</a></li>
+            <li><a href="#">Покупка в кредит</a></li>
+          </ul>
+        </div>
+        <div class="footer__link-buy">
+          <div class="footer__label">Доставка и оплата</div>
+          <ul>
+            <li><a href="#">Гарантия</a></li>
+            <li><a href="#">Сервисный центр</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Товары под заказ</a></li>
+            <li><a href="#">Способы оплаты</a></li>
+          </ul>
+        </div>
+        <div class="footer__link-contact">
+          <div class="footer__label">Контакты</div>
+          <ul>
+            <li><a href="#">Адрес магазина</a></li>
+            <li><a href="#">Реквизиты компании</a></li>
+            <li><a href="#">Обратная связь</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Написать руководителю</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__inf">
+        <div class="footer__inf-contact">
+          <div class="phone">
+            <div class="title">Телефон:</div>
+            <ul>
+              <li><a href="tel:+74722364094">+7(4722) 364-094</a></li>
+              <li><a href="tel:+74722364094">+7(4722) 364-094</a></li>
+              <li><a href="tel:+79290009110">+7-929-000-91-10</a></li>
+            </ul>
+          </div>
+          <div class="footer__inf-contact__data">
+            <div>
+              <div class="title">Время работы:</div>
+              <p>с 9:30 до 19:00 без выходных</p>
+            </div>
+            <div>
+              <div class="title">Адрес</div>
+              <a href="#">г. Белгород, Михайловское шоссе, 5а</a>
+            </div>
+            <div>
+              <div class="title">Email</div>
+              <p>info@климаткомфорт31.рф</p>
+            </div>
+          </div>
+        </div>
+        <div class="pay">
+          <div class="title">Способы оплаты:</div>
+          <div class="pay__wrap">
+            <a href="#" class="special">
+              <?xml version="1.0" encoding="UTF-8"?>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52pt" height="52pt" viewBox="0 0 52 52" version="1.1">
+              <g id="surface8604767">
+              <path style=" stroke:none;fill-rule:nonzero;fill-opacity:1;" d="M 7.8125 8 C 3.507812 8 0 11.507812 0 15.8125 L 0 36.1875 C 0 40.492188 3.507812 44 7.8125 44 L 44.1875 44 C 48.492188 44 52 40.492188 52 36.1875 L 52 15.8125 C 52 11.507812 48.492188 8 44.1875 8 Z M 31.9375 17.9375 C 33.632812 17.9375 35.375 18.625 35.375 18.625 L 34.8125 21.6875 C 34.8125 21.6875 33.4375 20.75 32.25 20.75 C 30.429688 20.75 29.8125 21.390625 29.8125 22.1875 C 29.8125 23.75 34.875 23.984375 34.875 27.5 C 34.875 30.421875 31.25 32.4375 28.625 32.4375 C 26 32.4375 24.625 31.625 24.625 31.625 L 25.25 28.75 C 25.25 28.75 26.632812 29.5625 28.75 29.5625 C 30.867188 29.5625 31.1875 28.632812 31.1875 28.25 C 31.1875 26.007812 26.125 26.609375 26.125 22.25 C 26.125 19.835938 28.085938 17.9375 31.9375 17.9375 Z M 15.5 18.1875 L 19.4375 18.1875 L 13.875 32 L 9.8125 32 L 6.875 20.8125 C 6.875 20.8125 9.96875 22.40625 11.875 26.6875 C 11.953125 27.210938 12.1875 28.0625 12.1875 28.0625 Z M 20.875 18.1875 L 24.625 18.1875 L 22.375 32 L 18.6875 32 Z M 40.8125 18.1875 L 44.625 18.1875 L 47.5 32 L 44.125 32 L 43.75 30.0625 L 39.1875 30.0625 L 38.4375 32 L 34.75 32 Z M 2.8125 18.25 L 8.5 18.25 C 9.953125 18.25 10.5 19.625 10.5 19.625 L 11.75 25.875 C 10.070312 20.453125 2.8125 18.25 2.8125 18.25 Z M 42.1875 22.1875 L 40.1875 27.4375 L 43.25 27.4375 Z M 42.1875 22.1875 "/>
+              </g>
+              </svg>
+              <span class="desc__link">Visa</span>
+            </a>
+            <a href="#">
+              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.923077 9.6V1.10769H17.7231V9.41538L0.923077 9.6Z" stroke="#D0D0D3"/>
+              <circle cx="9.41539" cy="5.35385" r="2.03077" fill="#D0D0D3"/>
+              <path d="M16.2462 1.29231C16.2462 1.46202 16.2796 1.63006 16.3445 1.78685C16.4095 1.94364 16.5047 2.08611 16.6247 2.20611C16.7447 2.32611 16.8871 2.4213 17.0439 2.48624C17.2007 2.55119 17.3688 2.58462 17.5385 2.58462L17.5385 1.29231H16.2462Z" fill="#D0D0D3"/>
+              <path d="M17.5385 7.75385C17.3688 7.75385 17.2007 7.78727 17.0439 7.85222C16.8871 7.91716 16.7447 8.01235 16.6247 8.13236C16.5047 8.25236 16.4095 8.39482 16.3445 8.55161C16.2796 8.7084 16.2462 8.87645 16.2462 9.04616L17.5385 9.04616V7.75385Z" fill="#D0D0D3"/>
+              <path d="M2.58462 9.41539C2.58462 9.24568 2.55119 9.07763 2.48624 8.92084C2.4213 8.76405 2.32611 8.62159 2.20611 8.50159C2.08611 8.38158 1.94364 8.28639 1.78685 8.22145C1.63006 8.1565 1.46202 8.12308 1.29231 8.12308L1.29231 9.41539H2.58462Z" fill="#D0D0D3"/>
+              <path d="M1.29231 2.58462C1.46201 2.58462 1.63006 2.55119 1.78685 2.48624C1.94364 2.4213 2.0861 2.32611 2.20611 2.20611C2.32611 2.08611 2.4213 1.94364 2.48624 1.78685C2.55119 1.63006 2.58461 1.46202 2.58461 1.29231L1.29231 1.29231L1.29231 2.58462Z" fill="#D0D0D3"/>
+              <path d="M22.7077 12.9231C22.538 12.9231 22.3699 12.9565 22.2131 13.0214C22.0564 13.0864 21.9139 13.1816 21.7939 13.3016C21.6739 13.4216 21.5787 13.564 21.5138 13.7208C21.4488 13.8776 21.4154 14.0457 21.4154 14.2154L22.7077 14.2154V12.9231Z" fill="#D0D0D3"/>
+              <path d="M6 14.5C6 14.303 5.9612 14.108 5.88582 13.926C5.81044 13.744 5.69995 13.5786 5.56066 13.4393C5.42137 13.3001 5.25601 13.1896 5.07403 13.1142C4.89204 13.0388 4.69698 13 4.5 13L4.5 14.5H6Z" fill="#D0D0D3"/>
+              <path d="M21.4154 6.09231C21.4154 6.26202 21.4488 6.43006 21.5138 6.58685C21.5787 6.74364 21.6739 6.8861 21.7939 7.00611C21.9139 7.12611 22.0564 7.2213 22.2131 7.28624C22.3699 7.35119 22.538 7.38461 22.7077 7.38461L22.7077 6.09231H21.4154Z" fill="#D0D0D3"/>
+              <path d="M4.43077 11.4462V14.4H23.0769V5.72308H19.5692" stroke="#D0D0D3"/>
+              <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="10" y="11" width="7" height="2">
+              <rect x="10.3385" y="11.4462" width="6.27692" height="1.47692" fill="#C4C4C4"/>
+              </mask>
+              <g mask="url(#mask0)">
+              <path d="M15.5077 10.5231C15.5077 10.7898 15.4552 11.0538 15.3531 11.3002C15.2511 11.5466 15.1015 11.7705 14.9129 11.959C14.7243 12.1476 14.5005 12.2972 14.2541 12.3993C14.0077 12.5013 13.7436 12.5538 13.4769 12.5538C13.2102 12.5538 12.9462 12.5013 12.6998 12.3993C12.4534 12.2972 12.2295 12.1476 12.041 11.959C11.8524 11.7705 11.7028 11.5466 11.6007 11.3002C11.4987 11.0538 11.4462 10.7898 11.4462 10.5231L13.4769 10.5231H15.5077Z" fill="#D0D0D3"/>
+              </g>
+              </svg>
+              <span class="desc__link">Наличными</span>
+            </a>
+            <a href="#">
+              <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="7.71429" cy="8.14286" r="7.71429" fill="#DDDDDD"/>
+              <path d="M16 0.5C10.4 0.5 8.5 5 8.5 8C8.5 11 10.4 15.5 16 15.5C21.6 15.5 23.5 11 23.5 8C23.5 5 21.6 0.5 16 0.5Z" stroke="#DDDDDD"/>
+              </svg>
+              <span class="desc__link">Master card</span>
+            </a>
+            <a href="#">
+              <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.7204 9.27389V14.1241L4.1612 20.1155" stroke="#D0D0D3"/>
+              <path d="M12.7204 1V9.27389H16.1441C16.8288 9.27389 17 9.6543 17 9.84451V20.9715C17 21.428 16.4294 21.7323 16.1441 21.8274H2.44937C1.07989 21.8274 0.927731 21.2568 1.02283 20.9715V9.84451C1.02283 8.70328 1.59345 8.03756 1.87875 7.84736L12.7204 1Z" stroke="#D0D0D3"/>
+              <ellipse cx="8.88922" cy="9.90384" rx="1.14123" ry="1.71184" transform="rotate(32 8.88922 9.90384)" fill="#D0D0D3"/>
+              </svg>
+              <span class="desc__link">Яндекс деньги</span>
+            </a>
+          </div>
+        </div>
+        <div class="sociable">
+          <div class="title">Мы в соц. сетях:</div>
+          <ul>
+            <li><a href="#"><i class="fa fa-vk" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-odnoklassniki-square" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-google-plus-square " aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__copyright">Все права защищены © 2014-2020</div>
+    </div>
+  </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- jQuery -->
+
+    <script type="text/javascript" src="script/slick.min.js"></script>
+    <!-- slick slider -->
+
+    <script type="text/javascript" src="script/jquery.validate.min.js"></script>
+    <!-- библиотека для валидации полей -->
+
+    <script type="text/javascript" src="script/jquery.inputmask.min.js"></script>
+    <!-- библиотека для маски на поле с вводом номера -->
+
+
+    <script type="text/javascript" src="script/product_image.js"></script>
+    <!-- Скрипт для увеличения изображений на странице продуктов -->
+
+    <script type="text/javascript" src="script/sidebar.js"></script>
+    <!-- Скрипт для правильного отображения меню с категориями товаров -->
+
+    <script type="text/javascript" src="script/sliders_sett.js"></script>
+    <!-- Скрипт с настройками всех сдайдеров-->
+
+    <script type="text/javascript" src="script/validation.js"></script>
+    <!-- Скрипт с валидацие полей-->
+
+    <script type="text/javascript" src="script/product_desc.js"></script>
+    <!-- Скрипт для изменения вида описания продукта-->
+
+    <script src="script/script.js"></script>
+
+
+
+
+</body>
+</html>

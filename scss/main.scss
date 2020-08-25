@@ -1,0 +1,439 @@
+@import 'font.scss';
+// шрифты
+@import 'variable.scss';
+// переменные
+@import 'header.scss';
+// Шапка (Адаптив находится в media.scss)
+@import 'preview.scss';
+// Главный экран (Адаптив находится в media.scss)
+@import 'advantages.scss';
+// Преимущества (Адаптив находится в media.scss)
+@import 'catalog.scss';
+// Каталог товаров (Адаптив находится в media.scss)
+@import 'desc.scss';
+// Секция описания (Адаптив находится в media.scss)
+@import 'reason.scss';
+// Секция причин купить (Адаптив находится в media.scss)
+@import 'articles-slider.scss';
+// Секция слайдера сос статьями (Адаптив находится в media.scss)
+@import 'contact.scss';
+// Секция контактов (Адаптив находится в media.scss)
+@import 'footer.scss';
+// Подвал (Адаптив находится в media.scss)
+@import 'sidebar.scss';
+// Каталог товаров
+@import 'listing.scss';
+// Листинг (Адаптив находится в media.scss)
+@import 'product.scss';
+// Страница продуктов
+@import 'cart.scss';
+// Страница корзины
+@import 'compare.scss';
+// Страница сравнения
+@import 'articles.scss';
+// Страница статей
+@import 'article.scss';
+// Страница статьи
+@import 'callback-section.scss';
+// Страница Контактов
+@import 'delivery.scss';
+// Страница доставки
+@import 'global-articles.scss';
+// Страница описания монтажа, акций и т.д.
+@import 'modal.scss';
+// Модальные окна
+
+
+
+*,
+*:before,
+*:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+}
+
+ul,li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat',sans-serif;
+  font-weight: 100;
+  color: #222;
+  &.body__hidden{
+    overflow: hidden;
+  }
+}
+
+section{
+  padding: 100px 0;
+}
+
+.container{
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+button{
+  outline: none;
+}
+
+@media (max-width: 800px) and (min-width: 601px){
+  header.mt__mobile{
+    margin-top: 70px;
+  }
+}
+
+@media (max-width: 600px){
+  header.mt__mobile{
+    margin-top: 70px;
+  }
+}
+
+.btn__move-up{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  bottom: 120px;
+  right: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,.2);
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1100;
+  transform: translateY(0px);
+  transition: .3s all ease;
+  img{
+    width: 26px;
+    transform: rotate(180deg);
+  }
+  &:hover{
+    background: #f7f7f7;
+    box-shadow: 0 0 14px rgba(0,0,0,.25);
+    transform: translateY(-6px);
+  }
+}
+
+
+
+//Основные кнопки и ссылки
+
+
+a.btn{
+  padding: 10px 24px;
+  font-family: 'Montserrat', serif;
+}
+
+a.bold-btn{
+  background: $blue;
+  color: #fff;
+  font-weight: 500;
+  box-shadow: 0px 0px 20px rgba(66, 73, 226, 0.5);
+  &:hover{
+    box-shadow: 0px 0px 20px rgba(66, 73, 226, 0.7);
+  }
+}
+
+a.light-btn{
+  outline: .5px solid $blue;
+  color: $blue;
+  font-weight: 300;
+  box-sizing: border-box;
+  outline-offset: -1px;
+  filter: drop-shadow(0px 0px 10px rgba(66, 73, 226, 0.25));
+  position: relative;
+  transition: .2s all ease;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    height: 100%;
+    width: 0;
+    background: $blue;
+    transition: .5s all ease;
+  }
+  &:hover{
+    color: #fff;
+    font-weight: 500;
+    &:before{
+      width: 100%;
+    }
+  }
+}
+
+
+a.btn__stroke{
+  position: relative;
+  color: #222;
+  transition: .3s all ease;
+  font-weight: 500;
+  &:after{
+    content: '';
+    width: 45%;
+    height: .5px;
+    position: absolute;
+    background: $blue;
+    left: -20%;
+    top: 125%;
+    transition: .3s all ease;
+  }
+  &:hover{
+    color: $blue;
+    &:after{
+      width: 130%;
+      left: -20%;
+    }
+  }
+}
+
+a.usual-btn{
+  color: $blue;
+  position: relative;
+  font-weight: 400;
+  &:after{
+    position: absolute;
+    content: '';
+    bottom: -18%;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    background: $blue;
+    transition: .3s all ease;
+  }
+  &:hover{
+    &:after{
+      width: 100%;
+    }
+  }
+}
+
+
+button.btn__stroke{
+  position: relative;
+  color: #222;
+  transition: .3s all ease;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #222222;
+  &:after{
+    content: '';
+    width: 45%;
+    height: .5px;
+    position: absolute;
+    background: $blue;
+    left: -20%;
+    top: 125%;
+    transition: .3s all ease;
+  }
+  &:hover{
+    color: $blue;
+    &:after{
+      width: 130%;
+      left: -20%;
+    }
+  }
+}
+
+//Основные кнопки и ссылки
+
+.icons{
+  margin-right: 22px;
+  width: 42px;
+  height: 42px;
+}
+
+h2.title{
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 46px;
+  color: #222;
+  margin-bottom: 50px;
+}
+
+.btn__arrow{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  background: transparent;
+  border: none;
+  margin-right: 36px;
+  position: relative;
+  padding-left: 16px;
+  color: #222;
+  span{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    color: $blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:hover{
+    color: $blue;
+    &:after{
+      transform: translate(-40%,-50%) rotate(180deg) scale(1.3);
+    }
+  }
+  &:after{
+    content: url(../images/arrowDown.svg);
+    position: absolute;
+    top: 50%;
+    left: 110%;
+    transform: translate(-40%,-35%) rotate(180deg);
+    transition: .3s all ease;
+  }
+  &.active{
+    color: #222;
+    font-size: 18px;
+    line-height: 22px;
+    span{
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 15px;
+    }
+    &:after{
+      transform: translate(-50%,-50%) rotate(0deg) scale(1.3);
+    }
+  }
+}
+
+.p-5{
+  padding: 5px;
+}
+
+
+.space-b{
+  justify-content: space-between;
+}
+
+//custom
+
+.preloader{
+  position: fixed;
+  z-index: 10000;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  &.active{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $blue;
+  margin: -4px 0 0 -4px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 63px;
+  left: 63px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 68px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 71px;
+  left: 48px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 71px;
+  left: 32px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 68px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 63px;
+  left: 17px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

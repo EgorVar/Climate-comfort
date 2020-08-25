@@ -1,0 +1,32 @@
+.callback{
+  &__connect{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 50px;
+    .map{
+      width: 48%;
+      height: 400px;
+      &__container{
+        width: 550px;
+      }
+      &__inner{
+        iframe{
+          height: 400px;
+        }
+      }
+    }
+  }
+  &__inner{
+    width: 48%;
+  }
+  &__data{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    margin: 120px 0 40px 0;
+  }
+}

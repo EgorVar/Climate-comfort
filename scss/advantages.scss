@@ -1,0 +1,32 @@
+// advantages
+
+
+.advantages{
+  padding: 20px 0;
+  background: $emptyBlueBg;
+  &__wrap{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 30%;
+    &-inf{
+      h4{
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 20px;
+      }
+      p{
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 5px;
+      }
+    }
+  }
+}

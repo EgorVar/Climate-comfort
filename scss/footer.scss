@@ -1,0 +1,215 @@
+footer{
+  background: $emptyBlueBg;
+  padding: 100px 0;
+}
+
+
+.footer{
+  &__label{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #222222;
+    margin-bottom: 22px;
+  }
+  &__link{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    &-catalog{
+      width: 48%;
+      ul{
+        margin-right: 28px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-wrap: wrap;
+        li{
+          width: 33%;
+        }
+      }
+    }
+    li{
+      margin-bottom: 8px;
+      a{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 15px;
+        color: #222222;
+        transition: .3s all ease;
+        &:hover{
+          color: $blue;
+        }
+      }
+    }
+  }
+  &__inf{
+    margin-top: 100px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .sociable{
+      margin-top: 0;
+      ul{
+        li:first-child{
+          margin-left: 0 !important;
+        }
+      }
+    }
+    &-contact{
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      .phone{
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        margin-right: 36px;
+        li{
+          margin-bottom: 8px;
+          font-weight: 300;
+          font-size: 13px;
+          line-height: 20px;
+        }
+      }
+      &__data{
+        div{
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          margin-bottom: 6px;
+          p{
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 20px;
+          }
+          a{
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+            text-decoration: underline;
+            color: rgba(34, 34, 34, 0.8);
+            transition: .3s all ease;
+            &:hover{
+              color: $blue;
+            }
+          }
+        }
+      }
+      .title{
+        font-size: 15px;
+        line-height: 17px;
+        color: $blue;
+        font-weight: 400;
+        margin-right: 18px;
+      }
+    }
+  }
+  &__copyright{
+    margin-top: 100px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 15px;
+    color: rgba(34, 34, 34, 0.8);
+    text-align: center;
+  }
+}
+
+.pay{
+  margin-bottom: 20px;
+  .title{
+    font-size: 15px;
+    line-height: 17px;
+    color: #585de6;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  &__wrap{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a{
+      position: relative;
+      &.special{
+        svg{
+          path{
+            fill: #ddd;
+            transition: .3s all ease;
+          }
+        }
+      }
+      svg{
+        width: 22px;
+        height: 22px;
+
+        path{
+          stroke: #ddd;
+          transition: .3s all ease;
+        }
+        circle{
+          stroke: #ddd;
+          transition: .3s all ease;
+        }
+        rect{
+          stroke: #ddd;
+          width: 1px;
+          transition: .3s all ease;
+        }
+        ellipse{
+          fill: #ddd;
+          transition: .3s all ease;
+        }
+      }
+      .desc__link{
+        position: absolute;
+        background: #fff;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -28px;
+        padding: 4px 10px;
+        box-shadow: 0 0 8px rgba(0,0,0,.1);
+        border-radius: 4px;
+        font-size: 11px;
+        color: #222;
+        font-weight: 400;
+        font-family: 'Montserrat', sans-serif;
+        z-index: 30;
+        display: none;
+        white-space: nowrap;
+      }
+      &:hover{
+        &.special{
+          svg{
+            path{
+              fill: $blue;
+            }
+          }
+        }
+        .desc__link{
+          display: block;
+        }
+        svg{
+          path{
+            stroke: $blue;
+          }
+          circle{
+            stroke: $blue;
+            fill: $blue;
+          }
+          rect{
+            stroke: $blue;
+            width: 1px;
+          }
+          ellipse{
+            fill: $blue;
+          }
+        }
+      }
+    }
+  }
+}

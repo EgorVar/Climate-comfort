@@ -1,0 +1,39 @@
+.reason{
+  &__desc{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    &-inf{
+      width: 48%;
+      li{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 1%;
+        color: #333333;
+        margin-bottom: 18px;
+        padding-left: 30px;
+        position: relative;
+        span{
+          font-style: normal;
+          font-weight: 600;
+          font-size: 28px;
+          color: $blue;
+          position: absolute;
+          top: 4px;
+          left: -14px;
+        }
+      }
+    }
+    &-img{
+      width: 48%;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.25);
+      background-size: cover;
+    }
+  }
+}
+
+.title-r{
+  text-align: right;
+}
